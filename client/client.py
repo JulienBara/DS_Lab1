@@ -20,5 +20,5 @@ while 1:
         break
 
     else:
-        socketClient.send("GET /?message=" + msg + "\n\n")
+        socketClient.send("GET /?message=" + msg + "\n")
         print socketClient.recv(4096)
