@@ -14,7 +14,7 @@ while 1:
         print 'Connection error'
         sys.exit()
 
-    msg = input("What is your message? (X to quit): ")
+    msg = raw_input("What is your message? (X to quit): ")
 
     if msg == 'X' or msg == 'x':
         socket.close()
