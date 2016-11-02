@@ -9,7 +9,6 @@ while 1:
     
     try :
         socketClient.connect((host, port))
-        print 'Connected'
     except :
         print 'Connection error'
         sys.exit()
