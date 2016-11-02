@@ -5,10 +5,10 @@ host = "localhost"
 port = 8000
 
 while 1:
-    socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    socketClient = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     
     try :
-        socket.connect((host, port))
+        socketClient.connect((host, port))
         print 'Connected'
     except :
         print 'Connection error'
@@ -17,9 +17,9 @@ while 1:
     msg = raw_input("What is your message? (X to quit): ")
 
     if msg == 'X' or msg == 'x':
-        socket.close()
+        socketClient.close()
         break
 
     else:
-        socket.send("GET /?message=" + msg + "\n\n")
-        print socket.recv(4096)
+        socketClient.send("GET /?message=" + msg + "\n\n")
+        print socketClient.recv(4096)
