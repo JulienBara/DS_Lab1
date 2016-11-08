@@ -3,8 +3,8 @@ import sys
 
 # host = "localhost"
 # port = 8000
-host = sys.argv[1]
-port = sys.argv[2]
+host = str(sys.argv[1])
+port = int(sys.argv[2])
 print (sys.argv)
 print (host)
 print (port)
