@@ -1,14 +1,12 @@
 import socket
 import sys
 
-# host = "localhost"
-# port = 8000
-host = str(sys.argv[1])
-port = int(sys.argv[2])
-print (sys.argv)
-print (host)
-print (port)
-
+if len(sys.argv) > 2:
+    host = str(sys.argv[1])
+    port = int(sys.argv[2])
+else:
+    host = "localhost"
+    port = 8000
 
 while 1:
     socketClient = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -16,7 +14,6 @@ while 1:
     try :
         socketClient.connect((host, port))
     except :
-        print "Unexpected error:", sys.exc_info()[0]
         print 'Connection error'
         sys.exit()
 
