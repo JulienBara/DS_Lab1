@@ -5,6 +5,7 @@ import sys
 # port = 8000
 host = sys.argv[0]
 port = sys.argv[1]
+print (sys.argv)
 print (host)
 print (port)
 
