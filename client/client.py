@@ -1,8 +1,11 @@
 import socket
 import sys
 
-host = "localhost"
-port = 8000
+# host = "localhost"
+# port = 8000
+host = sys.argv[0]
+port = sys.argv[1]
+
 
 while 1:
     socketClient = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
