@@ -15,9 +15,10 @@ while 1:
     
     try :
         socketClient.connect((host, port))
-    # except :
-    #     print 'Connection error'
-    #     sys.exit()
+    except :
+        print "Unexpected error:", sys.exc_info()[0]
+        print 'Connection error'
+        sys.exit()
 
     msg = raw_input("What is your message? (X to quit): ")
 
